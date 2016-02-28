@@ -1,0 +1,24 @@
+From Command Prompt
+
+Java:
+
+compile:
+javac '$file'.java
+run:
+java '$file'.class
+
+
+
+C++:
+
+compile:
+g++ '$file'
+run:
+//Just type the name of the app
+
+
+
+Python:
+
+compile and run:
+python '$file'.py
