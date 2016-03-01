@@ -21,6 +21,10 @@ def starting_statements():
 def main():
 	starting_statements()
 	playing = True
+	location = 1;
+
+def livingroom():
 	answer = input("What would you like to do?")
+
 
 main()

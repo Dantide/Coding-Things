@@ -1,0 +1,80 @@
+/*
+
+http://www.w3schools.com/css/
+http://www.w3schools.com/cssref/css_animatable.asp
+
+*/
+
+body {
+	background-color: #d0e4fe;
+	margin: 0px;
+
+	/*background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+					  url("http://ampbg.com/wp-content/uploads/sites/4/2015/05/12223-2-1024x680.jpg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;*/
+}
+
+p {
+	color: black;
+}
+
+h1 {
+	text-align: center;
+	text-decoration: underline;
+	color: #db8f00;
+}
+
+button {
+	margin: 20px;
+	padding: 20px;
+}
+
+button:hover {
+	/*background-color: purple;*/
+}
+
+
+
+
+
+#header {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+					  url("http://ampbg.com/wp-content/uploads/sites/4/2015/05/12223-2-1024x680.jpg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	padding-bottom: 50px;
+	padding-top: 100px;
+}
+
+#title {
+	margin-bottom: 30px;
+	margin-top: 0px;
+	padding: 200px 0px 30px;
+}
+
+#block {
+	color: white;
+	border-style: solid;
+	margin-right: auto;
+	font-size: 18px;
+	padding-left: 100px;
+	background-color: grey;
+	opacity: 0.8
+}
+
+#block p {
+	color: white;
+}
+
+#margin {
+	margin: 0px 50px;
+	border-style: solid;
+	background-color: #d3d0fe;
+}
+
+#resume {
+	background-color: #fed0e4;
+	margin-top: 100px;
+	border-top: dotted;
+}
