@@ -7,12 +7,7 @@ http://www.w3schools.com/cssref/css_animatable.asp
 
 body {
 	background-color: #d0e4fe;
-	margin: 0px;
-
-	/*background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-					  url("http://ampbg.com/wp-content/uploads/sites/4/2015/05/12223-2-1024x680.jpg");
-	background-size: 100% 100%;
-	background-repeat: no-repeat;*/
+	margin: 0px; /*This took too long to find and implement myself.*/
 }
 
 p {
@@ -28,6 +23,7 @@ h1 {
 button {
 	margin: 20px;
 	padding: 20px;
+	opacity: 0.5px;
 }
 
 button:hover {

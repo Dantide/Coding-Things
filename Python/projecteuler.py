@@ -77,6 +77,10 @@ def sumDigits(n):
 		temp += int(x)
 	return temp
 
+def triNum(n):
+	"Return the nth triangular number. Whereas tn = ½n(n+1)."
+	temp = (n/2)*(n+1)
+	return int(temp)
 
 
 
@@ -183,25 +187,18 @@ def mult5(most):
 		temp *= x**most[x]
 	return temp
 
+#problem 7
+def problem7():
+	count = 1
+	x = 3
+	while count<5000:
+		if isPrime(x):
+			count+=1
+		x+=2
+	print (x-2)
+
 #problem 8
-def problem8():
-	"Choose from the larger of the next two numbers. The idea worked, but it was wrong."
-	f = open("C:/Users/Stephen/Desktop/projecteuler/problem 5.txt")
-	index = 0
-	count = 0
-	for line in f:
-		array = line.split()
-		try:
-			num1 = int(array[index])
-			num2 = int(array[index+1])
-			if (num1 > num2):
-				count += num1
-			else:
-				count += num2
-				index += 1
-		except IndexError:
-			count += num1
-	print (count)
+
 
 #problem 10
 def sumOfPrimesBelow(n):
@@ -234,12 +231,6 @@ def factor2(n):
 		array.append(int(n/x))
 	array.sort()	
 	return array
-
-
-def triNum(n):
-	"Return the nth tpeaking riangular number. Whereas tn = ½n(n+1)."
-	temp = (n/2)*(n+1)
-	return int(temp)
 
 def problem12(n):
 	"Find the first number in the range that has more than n factors."
@@ -278,6 +269,24 @@ def findLattice(n):
 				array[x][i] = array[x-1][i] + array[x][i-1]
 	else:
 		return array[len(array)-1][len(array)-1]
+
+#problem 18
+def test18():
+	"Test"
+	f = open("C:/Users/Stephen/Desktop/projecteuler/test 18.txt")
+	f.close()
+
+def problem18():
+	"Choose from the larger of the next two numbers. The idea worked, but it was wrong."
+	f = open("C:/Users/Stephen/Desktop/projecteuler/problem 18.txt")
+	print (findmaximumpath(f))
+	f.close()
+
+def findmaximumpath(f):
+	for line in f:
+		print(line)
+
+problem18()
 
 #problem 20 SOLVED
 #print (sumDigits(factorial(10)))
@@ -331,5 +340,3 @@ def addSpiralDiag(n):
 		num += inc 				#The next diagonal number to add to count
 		count += num
 	return count
-
-print ("What")
