@@ -3,7 +3,7 @@ import string
 import timeit
 #print (sys.version)
 
-#REOCCURING STUFF M8S
+#REOCCURING FUCTIONS
 letterdict = {
 	'A' : 1, 'B' : 2, 'C' : 3, 'D' : 4, 'E' : 5, 'F' : 6, 'G' : 7, 'H' : 8, 'I' : 9,
 	'J' : 10, 'K' : 11, 'L' : 12, 'M' : 13, 'N' : 14, 'O' : 15, 'P' : 16, 'Q' : 17,
@@ -89,23 +89,23 @@ def triNum(n):
 
 
 
-#area for random code and stuff i guess
+#Problem Solving Area
 
 #print (timeit.repeat("for x in range(100): factor(x)", "from __main__ import factor", number=1000))
 #print (timeit.repeat("for x in range(100): factor2(x)", "from __main__ import factor2", number=1000))
 
 
 #problem 1 SOLVED
-def problem1():
+"""def problem1():
 	"Find the sum of all multiples of 3 or 5 below 1000."
 	count = 0
 	for x in range(0, 1000):
 		if (x % 3 == 0) or (x % 5 == 0):
 			count += x
-	print (count)
+	print (count)"""
 
 #problem 2 SOLVED
-def fibiter2():
+"""def fibiter2():
 	"Find the sum of all even fibbonacci numbers below four million."
 	i, count = 0, 0
 	num = fibnum(i)
@@ -114,10 +114,10 @@ def fibiter2():
 			count += num
 		i += 1
 		num = fibnum(i)
-	print (count)
+	print (count)"""
 
 #problem 3 SOLVED
-def problem3():
+"""def problem3():
 	"Find the largest prime factor of 600851475143."
 	array = []
 	temp = 600851475143
@@ -129,10 +129,10 @@ def problem3():
 				break
 	array.append(int(temp))
 	array.sort()
-	return (array)
+	return (array)"""
 
 #problem 4 SOLVED
-def isPalindrome(n):
+"""def isPalindrome(n):
 	"Tests if a number is a palindrome."
 	if str(n) == str(n)[::-1]:
 		return True
@@ -158,10 +158,10 @@ def problem4():
 		for x in range(999, 700, -1):
 			temp = x*num
 			if isPalindrome(temp):
-				return temp
+				return temp"""
 
 #problem 5 SOLVED
-def problem5(n):
+"""def problem5(n):
 	"LCM of all numbers from 1 to n."
 	most = {}
 	pexpo = primeExpo
@@ -185,7 +185,7 @@ def mult5(most):
 	temp = 1
 	for x in most:
 		temp *= x**most[x]
-	return temp
+	return temp"""
 
 #problem 7
 def problem7():
@@ -210,7 +210,7 @@ def sumOfPrimesBelow(n):
 	return count + 2
 
 #problem 12 SOLVED
-def factor(n):
+"""def factor(n):
 	"Return an array with all the factors of a number. Load increases greatly when using large numbers."
 	if n <= 0:
 		return None
@@ -242,21 +242,21 @@ def problem12(n):
 			print (num2)
 			return x
 	else:
-		return None
+		return None"""
 
 
 #problem 13 SOLVED
-def problem13():
+"""def problem13():
 	"Find the first 10 digits of the sum of the following one-hundred 50-digit numbers."
 	thing = open("C:/Users/Stephen/Desktop/projecteuler/problem 13.txt")
 	num = 0
 	for line in thing:
 		num += int(line)
 	print (num)
-	thing.close()
+	thing.close()"""
 
 #problem 15 SOLVED
-def findLattice(n):
+"""def findLattice(n):
 	"Return # of lattice paths in box n by n. http://www.mozartreina.com/counting-lattice-paths.html"
 	array = [[1 for x in range(n+1)] for x in range(n+1)]
 	for x in range(1, n+1):
@@ -268,7 +268,7 @@ def findLattice(n):
 			else:
 				array[x][i] = array[x-1][i] + array[x][i-1]
 	else:
-		return array[len(array)-1][len(array)-1]
+		return array[len(array)-1][len(array)-1]"""
 
 #problem 18
 def test18():
@@ -292,7 +292,7 @@ problem18()
 #print (sumDigits(factorial(10)))
 
 #problem 22 SOLVED
-def problem22():
+"""def problem22():
 	"What is the total of all the name scores in the file? (In alphabetical order)"
 	temp, count = 0, 1
 	f = open("C:/Users/Stephen/Desktop/projecteuler/p022_names.txt")
@@ -305,21 +305,21 @@ def problem22():
 			if (letter not in thing) and (letter is not ""):
 				temp += (letterdict[letter] * count)
 		count += 1
-	print (temp)
+	print (temp)"""
 
 #problem 25 SOLVED
-def problem25():
+"""def problem25():
 	"Return the n index of the first fibbonacci number longer than 1000 digits."
 	i = 1
 	while True:
 		if len(str(fibnum(i))) == 1000:
 			return i
 		else:
-			i += 1
+			i += 1"""
 
 
 #problem 28 SOLVED
-def createSpiral(n):
+"""def createSpiral(n):
 	if (n%2 == 0):
 		return None
 	array = [[0 for x in range(n)] for x in range(n)]
@@ -339,4 +339,4 @@ def addSpiralDiag(n):
 		inc = int((i+3)/4)*2 	#Every four numbers, the space between the diagonal numbers increases by two
 		num += inc 				#The next diagonal number to add to count
 		count += num
-	return count
+	return count"""
