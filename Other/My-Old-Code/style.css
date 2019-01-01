@@ -1,0 +1,42 @@
+/*Regular Selectors*/
+
+body {
+    background: white;
+}
+
+button {
+    font-size: 34;
+    
+}
+
+/*Classes*/
+
+.btn {
+    border: 1px solid;
+    height: 100px;
+    font-size: 20px;
+    width: 100px;
+    text-align: center;
+    border-radius: 100px;
+}
+
+.well {
+    font-size: 20px;
+    word-wrap: normal;
+}
+
+.jumbotron {
+    background: #35b0c9;
+}
+
+/*Ids*/
+
+#buttons {
+    text-align: center;
+    background-color: #FFFAD3;
+    margin: 0px 300px 0px 300px;
+}
+#direct {
+    text-align: center;
+    font-size: 33px;
+}
