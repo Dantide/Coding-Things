@@ -1,0 +1,22 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+\title{ECE 2300 - Lab 2 Report}
+\author{Stephen Chin and Aryaa Pai}
+\date{}
+
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+Hello, this is the part of the LaTeX file that explains that this is a test file for Latex.
+The following asdf should show up as variables: $asdf$.
+
+The following asdf should show up as centered variables: \[asdf\].
+
+\end{document}
+
