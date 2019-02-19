@@ -16,11 +16,11 @@ right=3cm,marginparwidth=1.75cm]{geometry}
 
 \section{Introduction}
 
-The overall goal of this lab was to sucessfully decode a four bit
+The overall goal of this lab was to successfully decode a 4-bit
 input to an output number display on a seven section decoder. The lab
 was split into two sections, both involving breadboarding inputs to
-create a sucessful display. The first part allowed all inputs to be
-sent through a CMOS CD4511B 7 segment decoder, allowing us to test our
+create a successful display. The first part allowed all inputs to be
+sent through a CMOS CD4511B 7-segment decoder, allowing us to test our
 initial breadboard setup, battery, and inputs. The second part allowed
 us to wire the decoders for inputs $c$, $e$, and $g$ using only NAND
 gates and inverters.
@@ -51,15 +51,78 @@ cares'', simplifying our logic expressions.
 
 
 
-\section{Implementation and Testing}
+\section{Implementation}
 
+
+
+
+\section{Testing}
+
+For part 1 of the lab, we tested the 7-segment decoder and display
+by sending each valid 4-bit input into the decoder. If the display
+shows the valid output for the 4-bit input, then we know that our
+circuit is properly wired. For part one, we did not run into any major
+problems involving wiring, and we were able to complete it without any
+major setbacks.
+
+For part 2, we tested our decoder and digital logic in essentially the
+same way as in part 1, by running the valid inputs through our
+circuits. For this part, we ran into multiple problems involving our
+wiring. We had a short in our circuit due to some wiring issues of
+inputs being wired to other inputs. We miswired one our decoder
+outputs to the incorrect segment on the decoder.
+
+The major difficulty of debugging our wiring problems was correctly
+identifying the problem from the breadboard and our outputs. The
+symptoms of each problem were either a single section of the display
+not working, or that the display would not work entirely. These
+symptoms did not give us enough information to identify the problem,
+as they could have been seen as a result of many other problems
+instead. For example, when we had a short in our circuit, our first
+idea was to check the power rails on the sides of the breadboard, then
+to check the battery, and then to check the power going to each of the
+chips. All of the problems that we checked for could have been
+diagnosed by the same symptoms, making it incredibly hard to properly
+debug the circuits we were making.
+
+However, we were able to mitigate some of the frustrations of
+debugging through other means when wiring our breadboard. First of
+all, we color-coded our input wires so that we could tell at a glance
+where a wire was intended to be from/going to. Though there were many
+connections that we had to check, the color coding we used helped us
+visualize our intended circuit. Another tactic we used was to create
+many different power and ground rails, allowing us to wire power and
+ground neatly, eliminating unnecessary wire crossover. Although it did
+not rid our circuit of bugs, what we did helped us visualize what our
+problems were.
 
 
 \section{Conclusion}
 
+For this lab, we wired a 7-segment display partially through a
+decoder, and partially manually. For the decoded outputs, we simply
+passed our inputs through the decoder chip and resistor array to the
+correct terminals on the 7-segment display. For our wired decoder on
+outputs $c$, $e$, and $g$, we used NAND gate chips to implement the
+logic function specified for the outputs.
+
+What we learned in this lab was how to generate minimized boolean
+expressions from Karnaugh maps, how to understand design
+specifications to create ''don't cares'' in our maps, and the process
+of wiring a complicated circuit on a breadboard.
 
 
 \section{Work Distribution}
+
+During the lab, both of us brought in our finished wiring designs from
+the output boolean expressions. While we were wiring the circuit, we
+ended up splitting the different parts of the wiring between the two
+of us, as one person would finish wiring the rails and chip
+connections as the other routed the inputs and outputs to their
+positions on the breadboard as per our design. For this lab report, we
+also split the work. While one person worked on the design and
+implementation sections of the report, the other worked on the
+testing, introduction, and conclusion.
 
 
 
