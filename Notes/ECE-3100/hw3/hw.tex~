@@ -1,0 +1,70 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[letterpaper,top=3cm,bottom=2cm,left=3cm,right=3cm,
+marginparwidth=1.75cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+
+
+\title{ECE 3100 - PSet 3}
+\author{Stephen Chin}
+\date{February 20}
+
+
+\begin{document}
+\maketitle
+
+\section*{Answers}
+
+\begin{enumerate}[itemsep=12pt]
+\item
+  Show that $\mathbb{P} (A_1^c \cup A_2^c \cup \dots \cup A_n^c) =
+  1 - \mathbb{P}(A_1) \mathbb{P}(A_2) \dots \mathbb{P}(A_n)$.
+
+  Well, if we take the complement of $A_1^c \cup A_2^c \cup \dots \cup A_n^c$, then we are left with
+  the set of all outcomes that are not in the complement of any of the events $A_1$ to $A_n$. Thus,
+  we are left with $A_1 \cap A_2 \cap \dots \cap A_n$. By definition of independence, we can rewrite
+  this as a product of all the events $A_1$ through $A_n$, bringing us to our goal.
+  
+  \[
+    \begin{aligned}
+      \mathbb{P} (A_1^c \cup A_2^c \cup \dots \cup A_n^c)
+      &= 1 - \mathbb{P} ((A_1^c \cup A_2^c \cup \dots \cup A_n^c)^c) \\
+      &= 1 - \mathbb{P} (A_1 \cap A_2 \cap \dots \cap A_n) \\
+      &= 1 - \mathbb{P} (A_1) \mathbb{P} (A_2) \dots \mathbb{P} (A_n)
+    \end{aligned}
+  \]
+  
+
+\item
+  Rangers and Canadiens
+
+  Let us define the events $A = { \text{event that the Canadiens win}}$ and $B = { \text{the event
+      that the rangers win}}$. We know that there can only be one winner, so $\mathbb{P} ( A \cap B
+  ) = 0$.
+
+
+\item
+  Communication System Transmissions
+
+  \begin{enumerate}
+  \item
+    Let $A_i = { \text{the event that the i-th transistor sends a message}}$.
+    $\mathbb{P} (\text{a successful transmission}) = p(1 - p)^{n-1}$.
+  \end{enumerate}
+
+
+\item
+  Communication System w/ Time Slots
+
+
+\item
+  Banking Password
+  
+  
+\end{enumerate}
+
+
+
+\end{document}

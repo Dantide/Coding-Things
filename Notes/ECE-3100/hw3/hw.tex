@@ -1,0 +1,108 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[letterpaper,top=3cm,bottom=2cm,left=3cm,right=3cm,
+marginparwidth=1.75cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+
+
+\title{ECE 3100 - PSet 3}
+\author{Stephen Chin}
+\date{February 20}
+
+
+\begin{document}
+\maketitle
+
+\section*{Answers}
+
+\begin{enumerate}[itemsep=12pt]
+\item
+  Show that $\mathbb{P} (A_1^c \cup A_2^c \cup \dots \cup A_n^c) =
+  1 - \mathbb{P}(A_1) \mathbb{P}(A_2) \dots \mathbb{P}(A_n)$.
+
+  Well, if we take the complement of $A_1^c \cup A_2^c \cup \dots \cup A_n^c$, then we are left with
+  the set of all outcomes that are not in the complement of any of the events $A_1$ to $A_n$. Thus,
+  we are left with $A_1 \cap A_2 \cap \dots \cap A_n$. By definition of independence, we can rewrite
+  this as a product of all the events $A_1$ through $A_n$, bringing us to our goal.
+  
+  \[
+    \begin{aligned}
+      \mathbb{P} (A_1^c \cup A_2^c \cup \dots \cup A_n^c)
+      &= 1 - \mathbb{P} ((A_1^c \cup A_2^c \cup \dots \cup A_n^c)^c) \\
+      &= 1 - \mathbb{P} (A_1 \cap A_2 \cap \dots \cap A_n) \\
+      &= 1 - \mathbb{P} (A_1) \mathbb{P} (A_2) \dots \mathbb{P} (A_n)
+    \end{aligned}
+  \]
+  
+
+\item
+  Rangers and Canadiens
+
+  Let us define the events $A = { \text{event that the Canadiens win}}$ and $B = { \text{the event
+      that the rangers win}}$. We know that there can only be one winner, so $\mathbb{P} ( A \cap B
+  ) = 0$.
+  
+  Not enough time to complete question.
+
+
+\item
+ Communication System Transmissions
+
+  \begin{enumerate}
+  \item
+    Let $A_i = { \text{the event that the i-th transistor sends a message}}$.
+    $\mathbb{P} (\text{a successful transmission}) = p(1 - p)^{n-1}$.
+
+  \item
+    The derivative of $p(1 - p)^{n-1}$ is $(1 - p)^{(-2 + n)} (1 - n p)$, which has zeros at the
+    values 1 and $1/n$. Because the range of possible values of p is $[0, 1]$, we also check the
+    value of p at 0. At $p = 1$ and $p = 0$, the probability of a successful transmission is $0$. At
+    $p = 1/n$, the probability of a successful trasmission is
+    $\frac{1}{n} (1 - \frac{1}{n})^{n - 1}$. This is the relative maximum for $p$ on the interval
+    $[0, 1]$.
+
+  \item
+    The $\lim_{x \to \infty} \frac{1}{n} (1 - \frac{1}{n})^{n - 1} = 0$. This makes sense, because
+    as we get more and more transmitters in our system, we are more likely to have two transmitters
+    that send their transmissions at the same time. The more tranmitters we have, the less likely we
+    send out a successful transmission.
+
+  \item
+    Not enough time to complete question.
+  \end{enumerate}
+
+
+\item
+  Communication System w/ Time Slots
+
+  \begin{enumerate}
+  \item
+    The probability that a successful transmission is sent within $k$ time slots is equal to one
+    minus the probability that no successful transmissions are sent within $k$ time slots. Let $F =
+    \{$the event that no successful transmissions are sent in the first $k$ time
+      slots$\}$. $\mathbb{P} (F) = k (1 - p (1 - p)^{n - 1})$, because we would need to have no
+    successful transmissions sent $k$ times.
+
+  \item
+    Not enough time to complete question.
+
+  \item
+    Not enough time to complete question.
+
+  \item
+    Not enough time to complete question.
+  \end{enumerate}
+
+\item
+  Banking Password
+
+  Not enough time to complete question.
+  
+  
+\end{enumerate}
+
+
+
+\end{document}
