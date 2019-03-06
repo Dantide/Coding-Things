@@ -1,0 +1,74 @@
+\documentclass{article} \usepackage[utf8]{inputenc}
+\usepackage[letterpaper,top=3cm,bottom=2cm,left=3cm,right=3cm,
+marginpaperwidth=1.75cm]{geometry} \usepackage{amsmath}
+\usepackage{amssymb} \usepackage{enumitem}
+
+
+\title{ECE 3100 - Functions, Formulas, and Definitions}
+\author{Stephen Chin} \date{Spring Semester 2019}
+
+
+\begin{document}
+\maketitle
+
+\section{Pre - Prelim 1}
+
+\subsection{Lecture 1 - What is Probability?}
+
+Probability is a way of mathematically modelling situations involving
+uncertainty with the goal of making predications decisions and models.
+Probability can be understood in many ways, such as:
+
+\begin{enumerate}
+\item Frequency of Occurence: Or percentage of successes in a
+  moderately large number of similar situations.
+  
+\item Subjective belief: Or ceratinty based on other understood facts
+  about a claim.
+\end{enumerate}
+
+For our Probability Models, we define the set of all outcomes to be
+$\Omega$, better known as the \textbf{sample space} of an
+experiment. All subsets of $\Omega$ are called \textbf{events}. These
+are both sets and can be understood using default set notation.
+
+
+\subsection{Lecture 2 - Probability Law}
+
+Given $\Omega$ chosen, a \textbf{probability law} on $\Omega$ is a
+mapping $\mathbb{P}$ that assings a number for every event such that:
+
+\begin{equation} \tag{Kolmogorov's Axioms} \boxed{
+    \begin{aligned} \mathbb{P}(A) \ge 0 & \quad \text{for every event
+        A} \\ \mathbb{P}(\Omega) = 1 & \quad \text{(normalization)}
+    \end{aligned} }
+\end{equation}
+
+
+\underline{Additivity rules:}
+\begin{itemize}
+\item If $A \cap B = \varnothing$, ($A, B$) events, then:
+  \begin{equation} \boxed{\mathbb{P}(A \cup B) = \mathbb{P}(A) +
+      \mathbb{P}(B)}
+  \end{equation}
+
+\item If events $A_1, A_2, \dots$ are all disjoint, then:
+  \begin{equation} \boxed{ \mathbb{P} (\bigcup\limits_{n=1}^{\infty}
+      A_n) = \sum_{n=1}^{\infty} \mathbb{P}(A_n) }
+  \end{equation}
+\end{itemize}
+
+By these rules, we can surmise that $\boxed{\mathbb{P} (\varnothing) =
+  0}$.
+
+For any events $A, B$:
+\begin{equation}
+  \tag{Event Union}
+  \boxed{
+    \mathbb{P}(A \cup B) = \mathbb{P}(A) + \mathbb{P}(B) -
+    \mathbb{P}(A \cap B)
+  }
+\end{equation}
+
+
+\end{document}
