@@ -44,17 +44,21 @@ mapping $\mathbb{P}$ that assings a number for every event such that:
     \end{aligned} }
 \end{equation}
 
-
 \underline{Additivity rules:}
 \begin{itemize}
 \item If $A \cap B = \varnothing$, ($A, B$) events, then:
-  \begin{equation} \boxed{\mathbb{P}(A \cup B) = \mathbb{P}(A) +
-      \mathbb{P}(B)}
+  \begin{equation}
+    \boxed{
+      \mathbb{P}(A \cup B) = \mathbb{P}(A) + \mathbb{P}(B)
+    }
   \end{equation}
 
 \item If events $A_1, A_2, \dots$ are all disjoint, then:
-  \begin{equation} \boxed{ \mathbb{P} (\bigcup\limits_{n=1}^{\infty}
-      A_n) = \sum_{n=1}^{\infty} \mathbb{P}(A_n) }
+  \begin{equation}
+    \boxed{
+      \mathbb{P} (\bigcup\limits_{n=1}^{\infty} A_n) =
+      \sum_{n=1}^{\infty} \mathbb{P}(A_n)
+    }
   \end{equation}
 \end{itemize}
 
@@ -67,6 +71,25 @@ For any events $A, B$:
   \boxed{
     \mathbb{P}(A \cup B) = \mathbb{P}(A) + \mathbb{P}(B) -
     \mathbb{P}(A \cap B)
+  }
+\end{equation}
+
+When we have a probability law on a finite $\Omega$ with all outcomes
+equally likely (i.e. $\mathbb{P}(\{s\}) = 1/size(\Omega)$), we call
+this probability law $\mathbb{P}$ a \textbf{(discrete uniform
+  probability law}.
+
+
+\subsection{Lecture 3 - Conditional Prob \& Product Rule}
+
+Conditional Probability is defined $\mathbb{P}(A \mid B)$ =
+``Probability of A given B''. It is understood as the likelyhood that
+event A occurs, given that B also occurs. 
+
+\begin{equation}
+  \tag{Conditional Probability Definition}
+  \boxed{
+    \mathbb{P}(A \mid B) = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)}
   }
 \end{equation}
 
