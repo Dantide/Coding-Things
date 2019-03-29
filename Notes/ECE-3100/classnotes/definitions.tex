@@ -18,6 +18,8 @@ marginpaperwidth=1.75cm]{geometry}
 
 \begin{document}
 \maketitle
+\tableofcontents
+\newpage
 
 \section{Pre - Prelim 1}
 
@@ -479,5 +481,71 @@ Special Case: $Y = \alpha X + \beta$
     
   \end{aligned}
 \]
+
+\subsubsection{Variance}
+
+Given an rv $X$ with pmf $p_X$, we define \textbf{Variance} to be:
+
+\begin{equation}
+  \tag{Variance Def}
+  \boxed{
+    Var(X) = \mathbb{E}((X - \mathbb{E}(X))^2)
+  }
+\end{equation}
+
+Off of this definition, we also define standard deviation to be
+$\sigma_X = \sqrt{Var(X)}$.
+
+
+\subsection{Lecture 10 - Expected Value and Variance Examples}
+
+\begin{itemize}
+\item $X$ is \textbf{Bernoulli(p)}:
+
+  \[
+    \mathbb{E}(X) = p; Var(X) = p(1 - p)
+  \]
+
+\item $X$ is \textbf{discrete uniform on $a \le k \le b$}:
+
+  \[
+    \mathbb{E}(X) = \frac{b + a}{2}
+  \]
+  
+\item $X$ is \textbf{Poisson($\lambda$)}:
+
+  \[
+    \mathbb{E}(X) = \lambda; Var(X) = \lambda
+  \]
+
+\item $X$ is \textbf{Geometric(p)}:
+
+  \[
+    \mathbb{E}(X) = \frac{1}{p}
+  \]
+\end{itemize}
+
+\pagebreak
+\section{Post Prelim 1 - Pre Prelim 2}
+
+\subsection{Lecture 11 - Multiple Discrete RVs, Joint pmf's,
+  Conditionals}
+
+
+\subsection{Lecture 12 - Conditional Probability for RV's, Conditional
+  Expectation}
+
+
+\subsection{Lecture 13 - Conditional Expectation, Indpendence of RVs}
+
+
+\subsection{Lecture 14 - Independence of Random Variables}
+
+
+\subsection{Lecture 15 - ``Randomness'' of RVs}
+
+
+\subsection{Lecture 16 - Continuous Random Variables}
+
 
 \end{document}

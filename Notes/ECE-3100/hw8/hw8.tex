@@ -1,0 +1,80 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[letterpaper,top=3cm,bottom=2cm,left=3cm,right=3cm,
+marginpaperwidth=1.75cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{titlesec}
+
+\title{ECE 3100 - PSet VII}
+\author{Stephen Chin}
+\date{March 27, 2019}
+
+
+\begin{document}
+\maketitle
+
+\section{Answers}
+
+\begin{enumerate}
+\item Frodo Tossing Coin %1
+
+\item Continuous random variable $X$ %2
+  \begin{enumerate}
+  \item %a
+    cdf $F_X(x)$:
+    \[
+      \begin{aligned}
+        F_X(x)
+        &= \int_{-\infty}^{x} f_X(x) dx \\
+        &= 
+      \end{aligned}
+    \]
+
+  \item %b
+    Expected Value:
+    \[
+      \begin{aligned}
+        \mathbb{E}(X)
+        &= \int_{-\infty}^{+\infty} x f_X(x) dx \\
+        &= 0 + \int_{\beta}^{+\infty} x f_X(x) dx \\
+        &= \int_{\beta}^{+\infty} x(\frac{1}{\alpha} e^{-(x-\beta) / \alpha}) dx \\
+        &= 
+      \end{aligned}
+    \]
+
+    Variance:
+    \[
+      \begin{aligned}
+        Var(X)
+        &= \int_{-\infty}^{+\infty} (X \mathbb{E}[X])^2 f_X(x) dx
+      \end{aligned}
+    \]
+
+  \item %c
+    Real Number $m$:
+    \[
+      \frac{1}{2} = \int_\beta^m f(x) dx
+    \]
+    
+  \end{enumerate}
+
+\item Random variable $X$ w/ cdf %3
+  \begin{enumerate}
+  \item %a
+    
+  \item %b
+    
+  \end{enumerate}
+
+\item Aragorn and Boromir %4
+
+\item Exponential pdf %5
+
+\item Continuous \#6 PSet V %6
+
+
+\end{enumerate}
+
+\end{document}
