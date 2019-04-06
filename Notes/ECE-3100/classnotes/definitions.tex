@@ -525,18 +525,206 @@ $\sigma_X = \sqrt{Var(X)}$.
   \]
 \end{itemize}
 
+
+
 \pagebreak
 \section{Post Prelim 1 - Pre Prelim 2}
 
 \subsection{Lecture 11 - Multiple Discrete RVs, Joint pmf's,
   Conditionals}
 
+\subsubsection{Joint pmf's}
+
+Given $\Omega, \mathbb{P}$, and two discrete rv's $X, Y$ defined in
+$\Omega$, define the \textbf{joint pmf} of $X & Y$ as:
+
+\begin{equation}
+  \tag{Joint pmf}
+  \boxed{
+    \forall x \in X, y \in Y, p_{X,Y} (x,y) = \mathbb{P}(\{X=x\} \cap
+    \{Y=y\}) = \mathbb{P}(A_x \cap B_y)
+  }
+\end{equation}
+
+For any set $V$ of possible value pairs $x,y$, we have that
+
+\[
+  \sum_{x,y \in V} p_{X,Y} (x,y) = \mathbb{P}(event that (X,Y) \in V)
+\]
+
+From the joint pmf $p_{X,Y}(x,y)$, we can derive the \textbf{marginal
+  pmfs} $p_X(x)$ and $p_Y(y)$ from the joint pmf as:
+
+\begin{equation}
+  \tag{Marginal Pmfs}
+  \boxed{
+    \forall x, p_X(x) = \sum_y p_{X,Y}(x,y) \forall x \\
+    \forall x, p_X(y
+    ) = \sum_x p_{X,Y}(x,y) \forall y
+  }
+\end{equation}
+
+Given $X,Y$ with joint pmf $p_{X,Y}(x,y)$ and some real valued
+function $Z=g(X,Y)$, we have:
+
+\begin{equation}
+  \tag{Joint Expected Value Rule}
+  \boxed{
+    \mathbb{E}(Z) = \sum_{x\in X} \sum_{y\in Y} g(x,y) p_{X,Y} (x,y)
+  }
+\end{equation}
+
+Special g choice: $g(X,Y) = \alpha X + \beta Y = \gamma$
+
+\[
+  \mathbb{E}(z) = \sum_x \sum _y (\alpha x + \beta y + \gamma) p_{X,Y}
+  (x,y) = \dots = \alpha\mathbb{E}(X) + \beta\mathbb{E}(Y) + \gamma
+\]
+
+Can be generalized to: $\mathbb{E}(\alpha_1z_1 + \alpha_2z_2 + \dots +
+\alpha_nz_n + \beta) = \alpha_1 \mathbb{E}(z_1) + \alpha_2
+\mathbb{E}(z_2) + \dots + \alpha_n \mathbb{E}(z_n) + \beta$
+
+\subsubsection{Conditional Stuff}
+
+Given $\Omega, \mathbb{P}$, a discrete rv $X$ defined on $\Omega$, an
+event $A \subset \Omega, \mathbb{P}(A) > 0$, and a possible value
+$x \in X$, the \textbf{conditional pmf} of $X$ given $A$ is defined
+as:
+
+\begin{equation}
+  \tag{Conditional pmf on event}
+  \boxed{
+    p_{X\mid A}(x) = \frac{\mathbb{P}(\{X = x\} \cup A)}
+    {\mathbb{P}(A)} = "\mathbb{P}(B \mid A) \text{ where } B \text{ is
+      the event } \{X=x\}"
+  }
+\end{equation}
+
+Observe that for any $A$ with $\mathbb{P}(A) > 0, p_{X\mid A}(x)$ as
+$x$ ranges over $X$'s values defines a pmf: i.e. $p_{X\mid A}(x) \leq
+0 \forall x$ and $\sum_{x \in X} p_{X\mid A}(x) = 1$.
+
+\subsubsection{RVs Conditional on RVs}
+
+Given $X,Y$ defined on some $\Omega, \mathbb{P}$, conditional pmf of
+$X$ given $Y$ is defined on $\forall x & \forall y$, with
+$\mathbb{P}(\{Y=y\}) = p_Y(y) > 0$ as:
+
+\begin{equation}
+  \tag{Conditional pmf on rv}
+  \boxed{
+    p_{X\mid Y}(x\mid y) = \frac{\mathbb{P}(\{X=x\} \cap \{Y=y\}}
+    {\mathbb{P}\{Y=y\}} = \frac{p_{X,Y}x,y)}{p_Y(y)}
+  }
+\end{equation}
+
+Observe that for any fixed $y$ with $p_Y(y) > 0, p_{X\mid Y}(x\mid y)$
+as $x$ ranges over $X$ values defines a pmf: i.e. $p_{X\mid Y} \geq 0$
+and $\sum_{x \in X} p_{X\mid Y}(x\mid y) = 1$.
+
 
 \subsection{Lecture 12 - Conditional Probability for RV's, Conditional
   Expectation}
 
+\subsubsection{Conditional Probability}
 
-\subsection{Lecture 13 - Conditional Expectation, Indpendence of RVs}
+Given events $A_1, A_2, \dots, A_n$ that partition $\Omega$ and
+$mathbb{P}(A_k) > 0, 0 \leq k \leq n$, then for any discrete rv $X$ on
+$\Omega$,
+
+\begin{equation}
+  \tag{Conditional Total Probability}
+  \boxed{
+    p_X(x) = \sum_{k=1}^n p_{X \mid A_k} \mathbb{P}(A_k)
+  }
+\end{equation}
+
+There are also ways of expressing the joint pmfs in terms of the
+marginals and vice versa:
+
+\begin{equation}
+  \tag{Product Rule of Sorts}
+  \boxed{
+    \begin{aligned}
+      p_{X,Y}(x,y)
+      &= p_Y(y) p_{X\mid Y}(x\mid y)
+      && \forall x \in X
+      &&& \text{ or,} \\
+      p_{X,Y}(x,y)
+      &= p_X(x) p_{Y\mid X}(y\mid x)
+      && \forall y \in Y
+    \end{aligned}
+  }
+\end{equation}
+
+\begin{equation}
+  \tag{Total-Prob Rule of Sorts}
+  \boxed{
+    \begin{aligned}
+      p_X(x)
+      &= \sum_{y \in Y} p_Y(y) p_{X\mid Y}(x \mid y)
+      && \forall x \in X
+      &&& \text{ or,}
+      p_Y(y)
+      &= \sum_{x \in X} p_X(x) p_{Y \mid X} (y\mid x)
+      && \forall y \in Y
+    \end{aligned}
+  }
+\end{equation}
+
+These also generalize to >2 rvs:
+
+\[
+  p_{X\mid Y,Z}(x\mid y,z) = \frac{\mathbb{P}(\{X=x\} \cap \{Y=y\}
+    \cap \{Z = z\})} {\mathbb{P}(\{Y=y\} \cap \{Z=z\}} =
+  \frac{p_{X,Y,Z} (x,y,z)} {p_{Y,Z}(y,z)}
+\]
+
+\[
+  p_{X,Y,Z}(x,y,z) = p_Z(z) p_{Y \mid Z}(y\mid z) p_{X\mid Y,Z} (x
+  \mid y,z)
+\]
+
+\subsubsection{Conditional Expectation}
+
+Given $\Omega, \mathbb{P}$, a discrete rv $X$, and an event $A$, we
+define the \textbf{Conditional Expectation} of $X$ given event $A$ as:
+
+\begin{equation}
+  \tag{Conditional Expectation}
+  \boxed{
+    \mathbb{E}(X \mid A) = \sum_{x\in X} xp_{X\mid A}(x)
+  }
+\end{equation}
+
+We know that given events $A_1, \dots, A_n$ that partition $\Omega$,
+$p_X(x) = \sum_{k=1}^n p_{X\mid A_k} (x\mid A_k)
+\mathbb{P}(A_k)$. From this we can derive:
+
+\[
+  \mathbb{E}(X) = \sum{x\in X} xp_X(x) = \sum_x \sum_k xp_{X\mid A_k}
+  (x) \mathbb{P}(A_k) = \sum_k(\sum_x xp_{x\mid A_k}(x))
+  \mathbb{P}(A_k)
+\]
+
+Given $\Omega, \mathbb{P}$, rvs $X,Y$, event $A = \{Y=y\}$:
+
+\[
+  \mathbb{E}(X\mid A) = \sum_{x\in X} xp_{X\mid A}(x) = \sum_{x\in X}
+  xp_{X\mid A}(x \mid y)
+\]
+
+Since all events $\{Y = y\}$ partition $\Omega$, we get:
+
+\[
+  \mathbb{E}(X) = \sum_{y\in Y} \mathbb{E}(X \mid Y=y)
+  \mathbb{P}(\{Y=y\})
+\]
+
+
+\subsection{Lecture 13 - Indpendence of RVs}
+
 
 
 \subsection{Lecture 14 - Independence of Random Variables}
