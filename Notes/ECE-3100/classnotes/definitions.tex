@@ -43,6 +43,7 @@ experiment. All subsets of $\Omega$ are called \textbf{events}. These
 are both sets and can be understood using default set notation.
 
 
+\medskip \hline
 \subsection{Lecture 2 - Probability Law}
 
 Given $\Omega$ chosen, a \textbf{probability law} on $\Omega$ is a
@@ -92,6 +93,7 @@ this probability law $\mathbb{P}$ a \textbf{(discrete) uniform
   probability law}.
 
 
+\medskip \hline
 \subsection{Lecture 3 - Conditional Prob \& Product Rule}
 
 \subsubsection{Conditional Probability}
@@ -152,6 +154,7 @@ different setups.
 \end{itemize}
 
 
+\medskip\hline
 \subsection{Lecture 4 - Total Probability}
 
 Given an event $B$, say $C_1, C_2, \dots, C_n$ (events) is a
@@ -177,6 +180,7 @@ From there we define the Total Probability Theorem:
 \end{equation}
 
 
+\medskip\hline
 \subsection{Lecture 5 - Bayes Law \& Independence}
 
 \subsubsection{Bayes Law}
@@ -217,6 +221,7 @@ Given $\Omega, \mathbb{P}$, any events $A$ and $B$ are
 \end{equation}
 
 
+\medskip\hline
 \subsection{Lecture 6 - Conditional Dependence \& Counting}
 
 \subsubsection{Conditional Dependence}
@@ -261,6 +266,7 @@ situations where either:
 \end{itemize}
 
 
+\medskip\hline
 \subsection{Lecture 7 - Counting}
 
 \textbf{Counting Principle:} in a process with a sequence of stages
@@ -312,6 +318,7 @@ k-combinations should be that over $k!$, making the \textbf{number of
 \end{equation}
 
 
+\medskip\hline
 \subsection{Lecture 8 - Discrete Random Variables}
 
 \subsubsection{Random Variables}
@@ -417,6 +424,8 @@ $X$'s that lead to that PMF.
   \]
 \end{itemize}
 
+
+\medskip\hline
 \subsection{Lecture 9 - Expectation, Variance}
 
 \subsubsection{Function of a Random Variable}
@@ -497,6 +506,7 @@ Off of this definition, we also define standard deviation to be
 $\sigma_X = \sqrt{Var(X)}$.
 
 
+\medskip\hline
 \subsection{Lecture 10 - Expected Value and Variance Examples}
 
 \begin{itemize}
@@ -527,6 +537,7 @@ $\sigma_X = \sqrt{Var(X)}$.
 
 
 
+\medskip\hline
 \pagebreak
 \section{Post Prelim 1 - Pre Prelim 2}
 
@@ -624,6 +635,7 @@ as $x$ ranges over $X$ values defines a pmf: i.e. $p_{X\mid Y} \geq 0$
 and $\sum_{x \in X} p_{X\mid Y}(x\mid y) = 1$.
 
 
+\medskip\hline
 \subsection{Lecture 12 - Conditional Probability for RV's, Conditional
   Expectation}
 
@@ -673,11 +685,11 @@ marginals and vice versa:
   }
 \end{equation}
 
-These also generalize to >2 rvs:
+These also generalize to $> 2$ rvs:
 
 \[
   p_{X\mid Y,Z}(x\mid y,z) = \frac{\mathbb{P}(\{X=x\} \cap \{Y=y\}
-    \cap \{Z = z\})} {\mathbb{P}(\{Y=y\} \cap \{Z=z\}} =
+    \cap \{Z = z\})} {\mathbb{P}(\{Y=y\} \cap \{Z=z\})} =
   \frac{p_{X,Y,Z} (x,y,z)} {p_{Y,Z}(y,z)}
 \]
 
@@ -723,17 +735,113 @@ Since all events $\{Y = y\}$ partition $\Omega$, we get:
 \]
 
 
+\medskip\hline
 \subsection{Lecture 13 - Indpendence of RVs}
 
+Given $\Omega, \mathbb{P}$, a discrete rv $X$ defined of $\Omega$, and
+an event $A$, say $X$ is \textbf{independent (event)} of $A$ when
+every event $\{X=x\}$ is independent of $A$ (event-wise), i.e:
+
+\begin{equation}
+  \tag{RV Event Independence}
+  \boxed{
+    \mathbb{P}(\{X=x\} \cup A) = p_X(x) \mathbb{P}(A)
+  }
+\end{equation}
+
+Note that when $\mathbb{P}(A) > 0$, it is the same as stating
+$p_{X\mid A} (x) = p_X(x) \forall x$.
+
+Say two rvs $X$ and $Y$ are \textbf{independent (rvs)} when:
+
+\begin{itemize}
+\item $X$ is indpendent of every event $\{Y=y\}$.
+\item $Y$ is independent of every event $\{X=x\}$.
+\item $p_{X,Y}(x,y) = p_X(x) p_Y(y) \forall x\in X, y\in Y$.
+\end{itemize}
+
+This extends to multiple rvs $X_1\dots X_n$. These rvs are independent
+when:
+
+\[
+  \underbrace{p_{X_1,\dots,X_n}(x_1,\dots,x_n)}_{\text{joint}} =
+  \underbrace{p_{X_1}(x_1)\dots p_{X_n}(X_n)}_{\text{product of
+      marginals}} \forall x_1, \dots, x_n
+\]
+
+Important facts about rv independence:
+
+\begin{itemize}
+\item If $X, Y$ are indpendent, then $\mathbb{E}(XY) = \mathbb{E}(X)
+  \mathbb{E}(Y)$
+  
+\item If $X, Y$ are indpendent, then $Var(X+Y) = Var(X) + Var(Y)$.  
+\end{itemize}
 
 
+\medskip\hline
 \subsection{Lecture 14 - Independence of Random Variables}
 
 
+\medskip\hline
 \subsection{Lecture 15 - ``Randomness'' of RVs}
 
+\subsubsection{Binary Entropy}
 
+We can quantify the ``randomness'' of an rv through the use of binary
+entropy. Suppose an rv $X$ has $N$ possible values, and that $p_X(x_k)
+= p_k, 1\leq k\leq N$, ($p_K=0$ is allowed). We define the
+\textbf{binary entropy} of discrete rvs as:
+
+\begin{equation}
+  \tag{Binary Entroy of RVs}
+  \boxed{
+    H(X) = \sum_{k=1}^{N} p_klog_2(p_k)
+  }
+\end{equation}
+
+$H(X)$ then becomes a good measure of ``how random $X$ is''.
+
+\bigskip
+\underline{Important Facts About Entropy:}
+
+\begin{itemize}
+\item If $p_k = 1$ for some $k$ and $0$ for all other $k$, $X$ is
+  ``least random''.
+
+\item If $p_k = \frac{1}{N} \forall k, X$ is ``maximally random''.
+  
+\item $0 \leq H(X) \leq log_2N$.
+  
+\item $H(X) = 0 \Leftrightarrow p_k = 1$ for some $k$.
+\end{itemize}
+
+\subsubsection{Source Coding Theorem}
+
+Given $X$ with pmf $p_X(x_k) = p_k, 1 \leq k \leq N$, any guaranteed
+successful Y/N 20 questions scheme for determining value of $X$ has a
+mean number of questions $\mathbb{E}(L)$ such that:
+
+\begin{equation}
+  \tag{Source Coding Theorm}
+  \boxed{
+    \mathbb{E}(L) \leq H(X)
+  }
+\end{equation}
+
+We compute $\mathbb{E}(L)$ as follows: let $l_k = #(\text{questions
+  you need to ask when } X = x_k)$, then:
+
+\[
+  \mathbb{E}(L) = \sum_{k=1}^Np_kl_k
+\]
+
+
+\medskip\hline
 \subsection{Lecture 16 - Continuous Random Variables}
 
+Given $\Omega, \mathbb{P}, X: \Omega \rightarrow \mathbb{R}$
 
+
+\medskip\hline
 \end{document}
