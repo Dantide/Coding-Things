@@ -1,0 +1,202 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[letterpaper,top=1cm,bottom=1.25cm,left=1cm,right=1cm,
+marginpaperwidth=1cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{color}
+\usepackage{comment}
+
+% \setlength{\parskip}{1em} 
+% \titlespacing*{\subsection}
+%   {0pt}{3\baselineskip}{\baselineskip}
+
+\def\columnseprulecolor{\color{black}}
+
+\begin{document}
+
+\begin{multicols}{2}
+\subsubsection*{Pdf, Cdf Def}
+
+\begin{equation*}
+  \boxed{
+    \begin{aligned}
+      \mathbb{P}(a\leq X\leq b) &= \int_a^b f_X(x)dx  &&
+      \begin{aligned}
+        F_X(x) &= \int_{-\infty}^x f_X(t)dt \text{ \underline{\textbf{cont}}} \\
+        f_X(x) &= \frac{d}{dx} F_X(x)
+      \end{aligned} \\
+      \mathbb{P}(\{X\in V\}) &= \int_V f_X(x)dx &&
+      \begin{aligned}
+        F_X(x) &= \mathbb{P}(\{X\leq x\}) \text{ \underline{\textbf{discr}}} \\
+        F_X(x) &= \sum_{\{x_k \mid x_k \leq x\}} p_X(x_k)
+      \end{aligned} \\
+      p_X(x_k) &= F_X(x_k) - F_X(x_{k-1})
+    \end{aligned}
+  }
+\end{equation*}
+
+
+\columnbreak
+\subsubsection*{\qquad Mean and Variance: Continuous}
+\begin{equation*}
+  \boxed{
+    \mathbb{E}(X) = \int_{-\infty}^{+\infty} xf_X(x)dx
+  }
+\end{equation*}
+
+\begin{equation*}
+  \boxed{
+    Var(X) = \mathbb{E}[(X - \mathbb{E}[X])^2]
+  }
+\end{equation*}
+
+\subsubsection*{\qquad Conditional Prob Def}
+
+\begin{equation*}
+  \boxed{
+    \mathbb{P}(A \mid B) = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)}
+  }
+\end{equation*}
+
+\end{multicols}
+
+\subsubsection*{Types of continuous rvs}
+
+\begin{multicols}{2}
+\begin{itemize}
+\item \textbf{X uniform on [a,b]:}
+  \begin{equation*}
+    \boxed{
+      \begin{aligned}
+        f_X(x) &=
+        \begin{cases}
+          \frac{1}{b-a} & \text{when } x \in [a,b] \\
+          0 & \text{else}
+        \end{cases} \\
+        F_X(x) &=
+        \begin{cases}
+          0 & \text{when } x < a \\
+          \frac{x-a}{b-a} & \text{when } a\leq x\leq b \\
+          1 & \text{when } x > b
+        \end{cases} \\
+        \mathbb{E}[X] &= \frac{b+a}{2} \qquad \qquad
+        Var(X) = \frac{(b-a)^2}{12}
+      \end{aligned}
+    }
+  \end{equation*}
+
+\item \textbf{X exponential($\lambda$):}
+  \begin{equation*}
+    \boxed{
+      \begin{aligned}
+        f_X(x) &=
+        \begin{cases}
+          \lambda e^{-\lambda x} & \text{when } x \geq 0 \quad \forall
+          \lambda > 0 \\
+          0 & \text{when } x < 0
+        \end{cases} \\
+        F_X(x) &=
+        \begin{cases}
+          1 - e^{-\lambda x} & \text{when } x\geq 0 \\
+          0 & \text{otherwise}
+        \end{cases} \\
+        \mathbb{E}[X] &= \frac{1}{\lambda} \qquad \qquad
+        Var(X) = \frac{1}{\lambda^2}
+      \end{aligned}
+    }
+  \end{equation*}
+
+\item \textbf{Gaussian rv:}
+  \begin{equation*}
+    \boxed{
+      \begin{aligned}
+        f_X(x) &= \frac{1} {\sqrt{2x\sigma^2}}
+        \exp{\Big(-\frac{(x-\mu)^2} {2\sigma^2}\Big)} \\
+        F_X(x) &= \frac{1} {\sqrt{2x\sigma^2}} \int_{-\infty}^x
+        \exp{\Big(-\frac{(t-\mu)^2}{2\sigma^2}\Big)} dt \\
+        \mathbb{E}(X) &= \mu \qquad \qquad
+        Var(X) = \sigma^2
+      \end{aligned}
+    }
+  \end{equation*}
+
+\item \textbf{standard normal:}
+
+  \begin{equation*}
+    \boxed{
+      \begin{aligned}
+        f_X(x) &= \frac{1}{\sqrt{2\pi}} e^{-x^2/2} \qquad 
+        \therefore \mathbb{E}(X)=0, \ Var=1 \\
+        \Phi(x) &= \frac{1}{\sqrt{2\pi}} \int_{-\infty}^x e^{-t^2/2} dt \\
+        \mathbb{P}(\{X>x\}) &= \mathbb{P}(\{\sigma + Y + M > x\}) =
+        \mathbb{P}\Big(Y>\frac{x-M}{\sigma}\Big)
+      \end{aligned}
+    }
+  \end{equation*}
+\end{itemize}
+\end{multicols}
+
+\subsubsection*{Joint Pdf}
+
+\begin{equation*}
+  \boxed{
+    \begin{aligned}
+      \begin{aligned}
+        \mathbb{P}(\{(X,Y)\in V\}) &= \iint_{-V} f_{X,Y}(x,y) dx dy \\
+        \mathbb{E}[g(X,Y)] &= \int_{-\infty}^{+\infty}
+        \int_{-\infty}^{+\infty} g(X,Y) f_{X,Y}(x,y) dx dy \\
+        F_{X,Y}(x,y) &= \mathbb{P}(X\leq x, Y\leq y)
+      \end{aligned} \quad &
+      \begin{aligned}
+        f_X(x) &= \int_{-\infty}^{+\infty} f_{X,Y}(x,y) dy \\
+        f_Y(y) &= \int_{-\infty}^{+\infty} f_{X,Y}(x,y) dx \\
+        f_{X,Y}(x,y) &= \frac{\delta F_{X,Y}} {\delta x\delta y}(x,y)
+      \end{aligned}
+    \end{aligned}
+  }
+\end{equation*}
+
+\subsubsection*{Indpendence: Continuous}
+
+\begin{multicols}{2}
+\begin{itemize}
+\item $f_{X,Y}(x,y) = f_X(x)f_Y(y) \quad \forall x, y$
+\item $\mathbb{E}(XY) = \mathbb{E}(X)\mathbb{E}(Y)$
+\item $\mathbb{E}(g(X)h(Y)) = \mathbb{E}(g(X))\mathbb{E}(h(Y))$
+\item $Var(X+Y) = Var(X)+Var(Y)$
+\end{itemize}
+\end{multicols}
+
+\begin{multicols}{2}
+\subsubsection*{Conditioning on Event}
+
+\begin{equation*}
+  \boxed{
+    \begin{aligned}
+      \mathbb{P}(\{X\in V\}\mid A) &= \int_V f_{X\mid A}(x) dx \\
+      f_{X\mid A}(x) &=
+      \begin{cases}
+        \frac{f_X(x)} {\mathbb{P}(\{X\in W\})} & \text{when } X\in W \\
+        0 & \text{otherwise}
+      \end{cases} \\
+      \mathbb{E}(X \mid A) &= \int_{-\infty}^{+\infty} xf_{X\mid A}(x)dx
+    \end{aligned}
+  }
+\end{equation*}
+
+\subsubsection*{Conditioning on rv}
+
+\begin{equation*}
+  \boxed{
+    \begin{aligned}
+      f_{X\mid Y}(x\mid y) &= \frac{f_{X,Y}(x,y)}{f_Y(y)} \\
+      f_X(x) &= \int_{-\infty}^{+\infty} f_Y(y)f_{X\mid Y}(x\mid y) dy \\
+      \mathbb{E}[X\mid Y=y] &= \int_{-\infty}^{+\infty} xf_{X\mid Y}(x\mid y) dx
+    \end{aligned}
+  }
+\end{equation*}
+
+\end{document}

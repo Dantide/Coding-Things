@@ -1,0 +1,80 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[letterpaper,top=3cm,bottom=2cm,left=3cm,right=3cm,
+marginpaperwidth=1.75cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{titlesec}
+
+\title{ECE 3100 - PSet 9}
+\author{Stephen Chin}
+\date{April 12}
+
+
+\begin{document}
+\maketitle
+
+\section{Answers}
+
+\begin{enumerate}
+\item Expected Value of Joint pmfs
+  \begin{enumerate}
+  \item Show Implications of Expected Value Rule.
+
+    Let $g(X,Y) = X + Y$.
+    
+    \[
+      \begin{aligned}
+        \mathbb{E}(X + Y) &= \int_{-\infty}^{\infty}
+        \int_{-\infty}^{\infty} (X + Y) f_{X,Y} (x,y) dx dy \\
+        &= \\
+        &= \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} xf_{X,Y}(x,y)dx
+        dy + \int_{-\infty}^{\infty} \int_{-\infty}^{\infty}
+        yf_{X,Y}(x,y) dx dy\\
+        &= \mathbb{E}(X) + \mathbb{E}(Y)
+      \end{aligned}
+    \]
+
+  \item Sketch subset of W.
+
+  \item Show $f_Z = \int_{-\infty}^{\infty} f_{X,Y}(x,z-x) dx$
+
+  \item Compute $\mathbb{E}(Z)$.
+    
+  \end{enumerate}
+
+\item Marginal pdfs not determining joint pdfs
+  \begin{enumerate}
+  \item $X$ and $Y$ jointly uniform
+
+  \item $X$ and $Y$ joint pdf
+
+  \end{enumerate}
+
+\item Sam breaks a stick
+
+\item Maddy's Commute to Work
+  \begin{enumerate}
+  \item How many minutes before work
+
+  \item Interpret the parameter
+
+  \item Find mean and standard deviation
+
+  \item Calulate $t^*$
+
+  \item Describe dependencies of $t^*$
+
+  \end{enumerate}
+
+\item Binary Communication Channel
+  \begin{enumerate}
+  \item Conditional pdf $f_{Y\mid A}(y)$
+  \item Marginal pdf $f_Y(y)$.
+
+  \item $\mathbb{P}(\{X = c \} \mid \{Y > 0\})$
+
+  \end{enumerate}
+\end{enumerate}
+\end{document}

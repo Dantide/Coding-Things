@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[10pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[letterpaper,top=1cm,bottom=1cm,left=1cm,right=1cm,
 marginpaperwidth=1cm]{geometry}
@@ -7,6 +7,7 @@ marginpaperwidth=1cm]{geometry}
 \usepackage{enumitem}
 \usepackage{multicol}
 \usepackage{color}
+\usepackage{comment}
 
 % \setlength{\parskip}{1em} 
 % \titlespacing*{\subsection}
@@ -19,7 +20,7 @@ marginpaperwidth=1cm]{geometry}
 %Lecture 2 - Probability Law
 
 \begin{multicols}{2}
-\subsubsection{Additivity rules:}
+\subsubsection*{Additivity rules:}
 
 For any events $A, B$:
 \begin{equation}
@@ -33,7 +34,7 @@ For any events $A, B$:
 % Lecture 3 - Conditional Probability & Product Rule
 
 \columnbreak
-\subsubsection{Conditional Probability}
+\subsubsection*{Conditional Probability}
 
 \begin{equation}
   \tag{Conditional Probability Def}
@@ -42,8 +43,7 @@ For any events $A, B$:
   }
 \end{equation}
 
-If there is a finite number of different outcomes that are all equally
-likely, the conditional prbability can be written as follows:
+For finite equally likely outcomes, can be written as follows:
 
 \begin{equation}
   \boxed{
@@ -53,12 +53,11 @@ likely, the conditional prbability can be written as follows:
 \end{equation}
 \end{multicols}
 
-\subsubsection{Product Rule}
+\subsubsection*{Product Rule}
 
 \begin{itemize}
-\item If we have events $D_1$ to $D_n$ where $D_1 > D_2 > \dots > D_n$
-  ($D_1$ largest, $D_n$ smallest), then we can apply the first form of
-  the product rule:
+\item With events $D_1$ to $D_n$ where $D_1 > D_2 > \dots > D_n$
+  ($D_1$ largest, $D_n$ smallest):
 
   \begin{equation}
     \tag{Product Rule 1}
@@ -68,11 +67,9 @@ likely, the conditional prbability can be written as follows:
     }
   \end{equation}
 
-\item If we have events $A_1$ to $A_n$ with non-empty intersection
-  (i.e. $A_1 \cap A_2 \cap \dots \cap A_n$), let $D_k = A_1 \cap A_2
-  \cap \dots \cap A_k$, then $D_1 > D_2 > \dots > D_n$. If we then
-  write the product rule on the events $D_n$ in terms of $A_n$, we
-  get:
+\item With events $A_1$ to $A_n$ with non-empty intersection, let
+  $D_k = A_1 \cap A_2 \cap \dots \cap A_k$, then
+  $D_1 > D_2 > \dots > D_n$:
 
   \begin{equation}
     \tag{Product Rule 2}
@@ -86,7 +83,7 @@ likely, the conditional prbability can be written as follows:
 
 % Lecture 4 - Total Probability Theorem
 
-\subsubsection{Total Probability Theorem}
+\subsubsection*{Total Probability Theorem, Bayes, \& Independence}
 
 \begin{equation}
   \tag{Total Probability Theorem}
@@ -99,10 +96,9 @@ likely, the conditional prbability can be written as follows:
 
 % Lecture 5 - Bayes Law & Independence
 
-\subsubsection{Bayes \& Independence}
-
-If $A_1, A_2, \dots, A_n$ are events that partition $\Omega$, w/
-nonzero $\mathbb{P}(A)$, then for any event $B$,
+\begin{multicols}{2}
+  If $A_1, A_2, \dots, A_n$ events that partition $\Omega$, nonzero
+  $\mathbb{P}(A)$:
 
 \begin{equation}
   \tag{Bayes' Law}
@@ -114,6 +110,8 @@ nonzero $\mathbb{P}(A)$, then for any event $B$,
   }
 \end{equation}
 
+\columnbreak
+
 \begin{equation}
   \tag{Independence Def}
   \boxed{
@@ -123,16 +121,14 @@ nonzero $\mathbb{P}(A)$, then for any event $B$,
       && \text{or} \\
       \mathbb{P}(A \mid B)
       &= \mathbb{P}(A), \mathbb{P}(B) > 0
-      && \text{or} \\
-      \mathbb{P}(B \mid A)
-      &= \mathbb{P}(B), \mathbb{P}(A) > 0
     \end{aligned}
   }
 \end{equation}
+\end{multicols}
 
 % Lecture 6 - Conditional Dependence & Counting
 
-\subsubsection{Conditional Dependence}
+\subsubsection*{Conditional Dependence}
 
 \begin{equation}
   \tag{Conditional Independence Def}
@@ -149,14 +145,7 @@ nonzero $\mathbb{P}(A)$, then for any event $B$,
 
 % Lecture 8 - Discrete Random Variables
 
-\subsubsection{Discrete Random Variables}
-
-\[
-  \begin{aligned}
-    p_X(x) \ge 0 & \quad \text{for every } x \in X \\
-    \sum\limits_{x \in X} p_X(x) = 1 & \quad \text{(normalization)}
-  \end{aligned}
-\]
+\subsubsection*{Discrete Random Variables}
 
 \begin{multicols}{2}
 \begin{itemize}
@@ -208,8 +197,9 @@ nonzero $\mathbb{P}(A)$, then for any event $B$,
 
 % Lecture 9 - Expectation, Variance
 
-\subsubsection{Expectation, Variance}
+\subsubsection*{Expectation, Variance}
 
+\begin{multicols}{2}
 \begin{equation}
   \tag{Expected Value Definition}
   \boxed{
@@ -217,12 +207,14 @@ nonzero $\mathbb{P}(A)$, then for any event $B$,
   }
 \end{equation}
 
+\columnbreak
+
 \begin{equation}
   \tag{Expected Value Rule}
   \boxed{
     \mathbb{E}(Y) = \sum\limits_{x \in X} g(X) p_X(x)
   }
 \end{equation}
-
+\end{multicols}
 
 \end{document}

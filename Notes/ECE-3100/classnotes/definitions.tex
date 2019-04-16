@@ -43,7 +43,7 @@ experiment. All subsets of $\Omega$ are called \textbf{events}. These
 are both sets and can be understood using default set notation.
 
 
-\medskip \hline
+\medskip \hrule
 \subsection{Lecture 2 - Probability Law}
 
 Given $\Omega$ chosen, a \textbf{probability law} on $\Omega$ is a
@@ -93,7 +93,7 @@ this probability law $\mathbb{P}$ a \textbf{(discrete) uniform
   probability law}.
 
 
-\medskip \hline
+\medskip \hrule
 \subsection{Lecture 3 - Conditional Prob \& Product Rule}
 
 \subsubsection{Conditional Probability}
@@ -133,7 +133,7 @@ different setups.
     \tag{Product Rule 1}
     \boxed{
       \mathbb{P}(D_n) = \mathbb{P}(D_1) \mathbb{P}(D_2 \mid D_1)
-      \mathbb{P}(D_3 \mid D_2) \dots \mathbb{P}(D_n \mid D_{n-1}
+      \mathbb{P}(D_3 \mid D_2) \dots \mathbb{P}(D_n \mid D_{n-1})
     }
   \end{equation}
 
@@ -154,33 +154,7 @@ different setups.
 \end{itemize}
 
 
-\medskip\hline
-\subsection{Lecture 4 - Total Probability}
-
-Given an event $B$, say $C_1, C_2, \dots, C_n$ (events) is a
-\textbf{partition} of $B$ when:
-\begin{itemize}
-\item $B = C_1 \cup C_2 \cup \dots \cup C_n$
-\item $C$'s are all disjoint
-\end{itemize}
-
-If $A_1, A_2, \dots, A_n$ is a partition of $\Omega$, then $C_1, C_2,
-\dots, C_n$ partitions $B$, where $C_k = B_k A_k$ for $a \leq k \leq
-n$.
-
-From there we define the Total Probability Theorem:
-
-\begin{equation}
-  \tag{Total Probability Theorem}
-  \boxed{
-    \mathbb{P}(B) = \mathbb{P}(B \mid C_1) \mathbb{P}(C_1) +
-    \mathbb{P}(B \mid C_2) \mathbb{P}(C_2) + \dots + \mathbb{P}(B \mid
-    C_n) \mathbb{P}(C_n)
-  }
-\end{equation}
-
-
-\medskip\hline
+\medskip\hrule
 \subsection{Lecture 5 - Bayes Law \& Independence}
 
 \subsubsection{Bayes Law}
@@ -221,7 +195,7 @@ Given $\Omega, \mathbb{P}$, any events $A$ and $B$ are
 \end{equation}
 
 
-\medskip\hline
+\medskip\hrule
 \subsection{Lecture 6 - Conditional Dependence \& Counting}
 
 \subsubsection{Conditional Dependence}
@@ -266,11 +240,11 @@ situations where either:
 \end{itemize}
 
 
-\medskip\hline
+\medskip\hrule
 \subsection{Lecture 7 - Counting}
 
 \textbf{Counting Principle:} in a process with a sequence of stages
-$1, 2 \dots, r$ with $n_1$ choices at stage 1 over to $n_r$ at stage
+$1, 2, \dots, r$ with $n_1$ choices at stage 1 over to $n_r$ at stage
 $r$; \# of coutcomes is $n_1 n_2 \dots n_k$.
 
 Can be used to rederive (\# subsets of $\Omega$) = $2^{\#(elem)}$.
@@ -318,7 +292,7 @@ k-combinations should be that over $k!$, making the \textbf{number of
 \end{equation}
 
 
-\medskip\hline
+\medskip\hrule
 \subsection{Lecture 8 - Discrete Random Variables}
 
 \subsubsection{Random Variables}
@@ -363,7 +337,7 @@ Given $\Omega, \mathbb{P}$, associated with any discrete rv $X :
   \]
 
 \item If $V$ is any finite or countably inf. set of possible values of
-  $X$, then if we set $B = \{ $the event ``$X \in V$'' $\}$,
+  $X$, then if we set $B = \{ $the event ``$X \in V$''$\}$,
   (i.e. $B = \{ s \in \Omega : X(s) \in V \} $), then
   $\mathbb{P}(B) = \sum\limits_{x \in V} p_X(x)$.
 \end{itemize}
@@ -410,7 +384,7 @@ $X$'s that lead to that PMF.
 
   \[
     p_X(k) = p (1-p)^{k-1} \quad \text{for all } 1 \leq k \leq \infty
-    \text{positive integers}
+    \text{ positive integers}
   \]
 
   This pmf tends to show up in situations such as $\mathbb{P}$(it
@@ -425,7 +399,7 @@ $X$'s that lead to that PMF.
 \end{itemize}
 
 
-\medskip\hline
+\medskip\hrule
 \subsection{Lecture 9 - Expectation, Variance}
 
 \subsubsection{Function of a Random Variable}
@@ -462,13 +436,12 @@ through:
 \]
 
 and get $P_y$ through $p_x$, though that is generally a non-trivial
-solution.
-
-Another possible solution is to use the Expected Value Rule.
+solution. However, another possible solution is to use the
+\textbf{Expected Value Rule}.
 
 \subsubsection{Expected Value Rule}
 
-Given $X, p_X, and Y=g(X)$,
+Given $X, p_X,$ and $Y=g(X)$,
 
 \begin{equation}
   \tag{Expected Value Rule}
@@ -486,8 +459,7 @@ Special Case: $Y = \alpha X + \beta$
     &= \sum\limits_{x \in X} (\alpha x + \beta) p_X(x) \\
     &= \alpha \sum\limits_{x \in X} x p_X(x) + \beta \sum\limits_{x
       \in X} p_X(x) \\
-    &= \alpha \mathbb{E}(X) + \beta
-    
+    &= \alpha \mathbb{E}(X) + \beta    
   \end{aligned}
 \]
 
@@ -506,7 +478,7 @@ Off of this definition, we also define standard deviation to be
 $\sigma_X = \sqrt{Var(X)}$.
 
 
-\medskip\hline
+\medskip\hrule
 \subsection{Lecture 10 - Expected Value and Variance Examples}
 
 \begin{itemize}
@@ -537,7 +509,9 @@ $\sigma_X = \sqrt{Var(X)}$.
 
 
 
-\medskip\hline
+
+
+\medskip\hrule
 \pagebreak
 \section{Post Prelim 1 - Pre Prelim 2}
 
@@ -547,12 +521,12 @@ $\sigma_X = \sqrt{Var(X)}$.
 \subsubsection{Joint pmf's}
 
 Given $\Omega, \mathbb{P}$, and two discrete rv's $X, Y$ defined in
-$\Omega$, define the \textbf{joint pmf} of $X & Y$ as:
+$\Omega$, define the \textbf{joint pmf} of $X \& Y$ as:
 
 \begin{equation}
   \tag{Joint pmf}
   \boxed{
-    \forall x \in X, y \in Y, p_{X,Y} (x,y) = \mathbb{P}(\{X=x\} \cap
+    \forall x \in X, y \in Y, \quad p_{X,Y} (x,y) = \mathbb{P}(\{X=x\} \cap
     \{Y=y\}) = \mathbb{P}(A_x \cap B_y)
   }
 \end{equation}
@@ -560,7 +534,8 @@ $\Omega$, define the \textbf{joint pmf} of $X & Y$ as:
 For any set $V$ of possible value pairs $x,y$, we have that
 
 \[
-  \sum_{x,y \in V} p_{X,Y} (x,y) = \mathbb{P}(event that (X,Y) \in V)
+  \sum_{x,y \in V} p_{X,Y} (x,y) = \mathbb{P}(\text{event that} (X,Y)
+  \in V)
 \]
 
 From the joint pmf $p_{X,Y}(x,y)$, we can derive the \textbf{marginal
@@ -569,9 +544,10 @@ From the joint pmf $p_{X,Y}(x,y)$, we can derive the \textbf{marginal
 \begin{equation}
   \tag{Marginal Pmfs}
   \boxed{
-    \forall x, p_X(x) = \sum_y p_{X,Y}(x,y) \forall x \\
-    \forall x, p_X(y
-    ) = \sum_x p_{X,Y}(x,y) \forall y
+    \begin{split}
+      \forall x, \quad p_X(x) &= \sum_y p_{X,Y}(x,y) \\
+      \forall y, \quad p_Y(y) &= \sum_x p_{X,Y}(x,y) 
+    \end{split}
   }
 \end{equation}
 
@@ -596,7 +572,7 @@ Can be generalized to: $\mathbb{E}(\alpha_1z_1 + \alpha_2z_2 + \dots +
 \alpha_nz_n + \beta) = \alpha_1 \mathbb{E}(z_1) + \alpha_2
 \mathbb{E}(z_2) + \dots + \alpha_n \mathbb{E}(z_n) + \beta$
 
-\subsubsection{Conditional Stuff}
+\subsubsection{Conditional pmf}
 
 Given $\Omega, \mathbb{P}$, a discrete rv $X$ defined on $\Omega$, an
 event $A \subset \Omega, \mathbb{P}(A) > 0$, and a possible value
@@ -606,7 +582,7 @@ as:
 \begin{equation}
   \tag{Conditional pmf on event}
   \boxed{
-    p_{X\mid A}(x) = \frac{\mathbb{P}(\{X = x\} \cup A)}
+    p_{X\mid A}(x) = \frac{\mathbb{P}(\{X = x\} \cap A)}
     {\mathbb{P}(A)} = "\mathbb{P}(B \mid A) \text{ where } B \text{ is
       the event } \{X=x\}"
   }
@@ -614,19 +590,19 @@ as:
 
 Observe that for any $A$ with $\mathbb{P}(A) > 0, p_{X\mid A}(x)$ as
 $x$ ranges over $X$'s values defines a pmf: i.e. $p_{X\mid A}(x) \leq
-0 \forall x$ and $\sum_{x \in X} p_{X\mid A}(x) = 1$.
+0, \  \forall x$ and $\sum_{x \in X} p_{X\mid A}(x) = 1$.
 
 \subsubsection{RVs Conditional on RVs}
 
 Given $X,Y$ defined on some $\Omega, \mathbb{P}$, conditional pmf of
-$X$ given $Y$ is defined on $\forall x & \forall y$, with
+$X$ given $Y$ is defined on $\forall x \ \& \ \forall y$, with
 $\mathbb{P}(\{Y=y\}) = p_Y(y) > 0$ as:
 
 \begin{equation}
   \tag{Conditional pmf on rv}
   \boxed{
-    p_{X\mid Y}(x\mid y) = \frac{\mathbb{P}(\{X=x\} \cap \{Y=y\}}
-    {\mathbb{P}\{Y=y\}} = \frac{p_{X,Y}x,y)}{p_Y(y)}
+    p_{X\mid Y}(x\mid y) = \frac{\mathbb{P}(\{X=x\} \cap \{Y=y\})}
+    {\mathbb{P}(\{Y=y\})} = \frac{p_{X,Y}(x,y)}{p_Y(y)}
   }
 \end{equation}
 
@@ -635,14 +611,14 @@ as $x$ ranges over $X$ values defines a pmf: i.e. $p_{X\mid Y} \geq 0$
 and $\sum_{x \in X} p_{X\mid Y}(x\mid y) = 1$.
 
 
-\medskip\hline
+\medskip\hrule
 \subsection{Lecture 12 - Conditional Probability for RV's, Conditional
   Expectation}
 
 \subsubsection{Conditional Probability}
 
 Given events $A_1, A_2, \dots, A_n$ that partition $\Omega$ and
-$mathbb{P}(A_k) > 0, 0 \leq k \leq n$, then for any discrete rv $X$ on
+$\mathbb{P}(A_k) > 0,\ 0 \leq k \leq n$, then for any discrete rv $X$ on
 $\Omega$,
 
 \begin{equation}
@@ -677,7 +653,7 @@ marginals and vice versa:
       p_X(x)
       &= \sum_{y \in Y} p_Y(y) p_{X\mid Y}(x \mid y)
       && \forall x \in X
-      &&& \text{ or,}
+      &&& \text{ or,} \\
       p_Y(y)
       &= \sum_{x \in X} p_X(x) p_{Y \mid X} (y\mid x)
       && \forall y \in Y
@@ -715,7 +691,7 @@ $p_X(x) = \sum_{k=1}^n p_{X\mid A_k} (x\mid A_k)
 \mathbb{P}(A_k)$. From this we can derive:
 
 \[
-  \mathbb{E}(X) = \sum{x\in X} xp_X(x) = \sum_x \sum_k xp_{X\mid A_k}
+  \mathbb{E}(X) = \sum_{x\in X} xp_X(x) = \sum_x \sum_k xp_{X\mid A_k}
   (x) \mathbb{P}(A_k) = \sum_k(\sum_x xp_{x\mid A_k}(x))
   \mathbb{P}(A_k)
 \]
@@ -735,8 +711,8 @@ Since all events $\{Y = y\}$ partition $\Omega$, we get:
 \]
 
 
-\medskip\hline
-\subsection{Lecture 13 - Indpendence of RVs}
+\medskip\hrule
+\subsection{Lecture 13 \& 14 - Indpendence of RVs}
 
 Given $\Omega, \mathbb{P}$, a discrete rv $X$ defined of $\Omega$, and
 an event $A$, say $X$ is \textbf{independent (event)} of $A$ when
@@ -745,19 +721,19 @@ every event $\{X=x\}$ is independent of $A$ (event-wise), i.e:
 \begin{equation}
   \tag{RV Event Independence}
   \boxed{
-    \mathbb{P}(\{X=x\} \cup A) = p_X(x) \mathbb{P}(A)
+    \mathbb{P}(\{X=x\} \cap A) = p_X(x) \mathbb{P}(A)
   }
 \end{equation}
 
 Note that when $\mathbb{P}(A) > 0$, it is the same as stating
-$p_{X\mid A} (x) = p_X(x) \forall x$.
+$p_{X\mid A} (x) = p_X(x),\ \forall x$.
 
 Say two rvs $X$ and $Y$ are \textbf{independent (rvs)} when:
 
 \begin{itemize}
 \item $X$ is indpendent of every event $\{Y=y\}$.
 \item $Y$ is independent of every event $\{X=x\}$.
-\item $p_{X,Y}(x,y) = p_X(x) p_Y(y) \forall x\in X, y\in Y$.
+\item $p_{X,Y}(x,y) = p_X(x) p_Y(y) \quad \forall x\in X, y\in Y$.
 \end{itemize}
 
 This extends to multiple rvs $X_1\dots X_n$. These rvs are independent
@@ -766,7 +742,7 @@ when:
 \[
   \underbrace{p_{X_1,\dots,X_n}(x_1,\dots,x_n)}_{\text{joint}} =
   \underbrace{p_{X_1}(x_1)\dots p_{X_n}(X_n)}_{\text{product of
-      marginals}} \forall x_1, \dots, x_n
+      marginals}} \quad \forall x_1, \dots, x_n
 \]
 
 Important facts about rv independence:
@@ -779,11 +755,7 @@ Important facts about rv independence:
 \end{itemize}
 
 
-\medskip\hline
-\subsection{Lecture 14 - Independence of Random Variables}
-
-
-\medskip\hline
+\medskip\hrule
 \subsection{Lecture 15 - ``Randomness'' of RVs}
 
 \subsubsection{Binary Entropy}
@@ -829,7 +801,7 @@ mean number of questions $\mathbb{E}(L)$ such that:
   }
 \end{equation}
 
-We compute $\mathbb{E}(L)$ as follows: let $l_k = #(\text{questions
+We compute $\mathbb{E}(L)$ as follows: let $l_k = \#(\text{questions
   you need to ask when } X = x_k)$, then:
 
 \[
@@ -837,11 +809,403 @@ We compute $\mathbb{E}(L)$ as follows: let $l_k = #(\text{questions
 \]
 
 
-\medskip\hline
+\medskip\hrule
 \subsection{Lecture 16 - Continuous Random Variables}
 
-Given $\Omega, \mathbb{P}, X: \Omega \rightarrow \mathbb{R}$
+\subsubsection{Continous Random Variables}
+
+Given $\Omega, \mathbb{P}, X: \Omega \rightarrow \mathbb{R}$ is a
+\textbf{continous rv} when there's a ``reasonable'' function $f_X(x)$
+such that for every $V \subset \mathbb{R}$, we have:
+
+\begin{equation}
+  \tag{Continuous rv}
+  \boxed{
+    \mathbb{P}(\{X\in V\}) = \int_V f_X(x)dx
+  }
+\end{equation}
+
+That function $f_X(x)$ is called the \textbf{probability density
+  function (pdf)} of $X$. It can be interpreted as the ``probability
+'mass' per unit 'length''' of an rv.
+
+Special Case of $V$: $V = [a,b]$ or $[a,b), (a,b], (a,b)$ we have:
+
+\[
+  \mathbb{P}(\{X\in V\}) = \int_a^b f_X(x)dx
+\]
+
+Some properties of $f_X(x)$:
+
+\begin{itemize}
+\item $f_X(x) \geq 0 \ \forall x$ (need to ensure $\mathbb{P}(\{X \in
+  V\}) \geq 0$ for all $V \subset R$)
+
+\item $\lim\limits_{R\to\infty} \int\limits_{-R}^{+R} f_X(x) dx = 1
+  \rightarrow \int\limits_{-\infty}^{\infty} f_X(x)dx =
+  \mathbb{P}(\{X\in(-\infty,\infty)\}) = 1$
+
+\item Given $x\in R$, $f_X(x)$ is NOT $\mathbb{P}(\text{some event})$
+  --- in particular, $f_X(x) \not= \mathbb{P}(\{X=x\})$.
+
+\item Turns out $\mathbb{P}(\{X=x\})=0 \quad \forall x\in R$ when $X$
+  is a continuous random variable.
+
+\item Since $f_X(x)$ isn't $\mathbb{P}(\text{some event})$, need not
+  have $f_X(x) \leq 1$! In fact, $f_X(x)$ can take on arbitrarily
+  large values!
+\end{itemize}
+
+\subsubsection{Expected Value}
+
+The \textbf{expected value} of a continous rv $X$ with pdf $f_X(x)$ is
+defined as (Note: expected value not always defined, integral might
+fail to exist):
+
+\begin{equation}
+  \tag{Expected Value: Continous rv}
+  \boxed{
+    \mathbb{E}(X) = \int_{-\infty}^{+\infty} xf_X(x)dx
+  }
+\end{equation}
+
+Given continous rv $X$ with pdf $f_X(x)$ and $Y=g(X)$, we define the
+\textbf{Expected Value Rule} as:
+
+\begin{equation}
+  \tag{Expected Value Rule}
+  \boxed{
+    \mathbb{E}[Y] = \int_{-\infty}^{+\infty} g(X) f_X(x) dx
+  }
+\end{equation}
+
+Special Case: $g(X) = \alpha X + \beta$
+
+\[
+  \mathbb{E}[g(X)] = \alpha \mathbb{E}[X] + \beta
+\]
+
+\subsubsection{Variance}
+
+Given continous rv $X$ w/ defined expected value $\mathbb{E}[X]$, we
+define the \textbf{Variance} as:
+
+\begin{equation}
+  \tag{Variance: Continous rv}
+  \boxed{
+    Var(X) = \mathbb{E}[(X - \mathbb{E}[X])^2]
+  }
+\end{equation}
+
+By expected value rule, we also have:
+
+\[
+  Var(X) = \int_{-\infty}^\infty (X - \mathbb{E})^2 f_X(x) dx
+\]
+
+Also, as before:
+
+\[
+  Var(X) = \mathbb{E}[X^2] - (\mathbb{E}[X])^2
+\]
+
+\subsubsection{Interpretations}
+
+$\mathbb{E}(X)$ can interpreted as the center of the ``probability
+mass'' defined by $f_X(x)$.
+
+$Var(X)$ can be interpreted as the spread of the ``proability mass''
+about its center.
+
+\subsubsection{Common Continuous RVs}
+
+Some common continuous rvs are:
+
+\begin{itemize}
+\item \textbf{X uniform on [a,b]:} Given $a,b \in \mathbb{R};\ a < b$;
+  let the pdf of the ``uniform on [a,b]'' rv be defined as:
+  
+  \[
+    f_X(x) =
+    \begin{cases}
+      \frac{1}{b-a} & \text{when } x \in [a,b] \\
+      0 & \text{else}
+    \end{cases}
+  \]
+
+  For the uniform on [a,b] rv, we have: $\mathbb{E}[X] = \frac{b+a}{2}$
+  and $Var(X) = \frac{(b-a}^2}{12}$.
+
+\item \textbf{X exponential($\lambda$):} Given $\lambda \in
+  \mathbb{R}$; let the pdf of the ``exponential($\lambda$)'' rv be
+  defined as:
+  
+  \[
+    f_X(x) =
+    \begin{cases}
+      \lambda e^{-\lambda x} & \text{when } x \geq 0 \quad \forall
+      \lambda > 0 \\
+      0 & \text{when } x < 0
+    \end{cases}
+  \]
+
+  For the exponential($\lambda$) rv, we have: $\mathbb{E}[X] =
+  \frac{1}{\lambda}$ and $Var(X) = \frac{1}{\lambda^2}$.
+
+\item \textbf{X piecewise uniform:} TODO
+\end{itemize}
 
 
-\medskip\hline
+
+\medskip\hrule
+\subsection{Lecture 17 - Cumulative Distribution Function}
+
+\subsubsection{Cumulative Distribution Function}
+
+For any rv $X$ (discrete of continous), the \textbf{cumulative
+  distribution function (cdf)} if defined as:
+
+\begin{equation}
+  \tag{Cdf Definition: Continuous}
+  \boxed{
+    F_X(x) = \mathbb{P}(\{X\leq x\}) \quad \forall x \in \mathbb{R}
+  }
+\end{equation}
+
+If $X$ is a continuous rv w/ pdf $f_X(x)$, then since
+$\mathbb{P}(\{X\leq x\}) = \int_{-\infty}^x f_X(t)dt$, we have:
+
+\[
+  F_X(x) = \int_{-\infty}^x f_X(t)dt \quad \text{ and } \quad
+  f_X(x) = \frac{d}{dx} F_X(x)
+\]
+
+\underline{Discrete Version:} If $X$ is a discrete rv with pmf $p_X(x)$,
+we have:
+
+\begin{equation}
+  \tag{Cdf Definition: Discrete}
+  \boxed{
+    F_X(x) = \sum_{\{x_k \mid x_k \leq x\}} p_X(x_k)
+  }
+\end{equation}
+
+This formula can also be inverted to get $p_X(x)$ in terms of
+$F_X(x)$:
+
+\[
+  p_X(x_k) = F_X(x_k) - F_X(x_{k-1})
+\]
+
+where $x_{k-1}$ is the ``next largest value'' of $X$ below $x_k$.
+
+\subsubsection{General Properties of cdfs}
+
+\begin{enumerate}
+\item $\lim_{x\to-\infty}F_X(x) = 0$ and $\lim_{x\to\infty}F_X(x) = 1$.
+  
+\item When $X$ is a continuous rv, $F_X(x)$ is continuous in $x$ and
+  differentiable ``almost everywhere'' (corners in $F_X(x)$ correspond
+  to jump in $f_X(x)$)
+
+\item $X$ is a discrete rv iff $F_X(x)$ is peice wise constant.
+
+\item $F_X(x)$ is monotomically increasing in $x$, i.e.
+  \[
+    x_1 \leq x_2 \quad \Rightarrow \quad F_X(x_1) \leq F_X(x_2)
+  \]
+\end{enumerate}
+
+Cdfs are alse useful for getting the pdf of $X$ by first computing
+$F_X(x)$, then taking $d/dx$.
+
+\subsubsection{Gaussian rv}
+
+Another inportant continuous rv is the \textbf{Gaussian rv}. The pdf
+of the Gaussian rv is:
+
+\[
+  f_X(x) = \frac{1} {\sqrt{2x\sigma^2}}
+  \exp{\bigg(-\frac{(x-M)^2\bigg)} {2\sigma^2}}
+\]
+
+With this pdf, we can see that $\mathbb{E}(X) = M$ and $Var(X) =
+\mathbb{E}((X-M)^2) = \sigma^2$. The cdf of a Gaussian rv is:
+
+\[
+  F_X(x) = \frac{1} {\sqrt{2x\sigma^2}} \int_{-\infty}^x
+  \exp{-\frac{(t-m)^2}{2\sigma^2}} dt
+\]
+
+The \textbf{standard normal} pdf is a specific type of Gaussian pdf:
+
+\[
+  \frac{1}{\sqrt{2\pi}} e^{-x^2/2} \quad \therefore M=0, \ \sigma=1
+\]
+
+The cdf of the standard normal pdf is:
+
+\[
+  \Phi(x) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^x e^{-t^2/2} dt
+\]
+
+The standard normal pdf can be created from a Gaussian rv with mean
+$M$ and var $\sigma^2$ as $Y=\frac{X-M}{\sigma}$ (Example):
+
+\[
+  \mathbb{P}(\{X>17\}) = \mathbb{P}(\{\sigma + Y + M > 17\}) =
+  \mathbb{P}\Big(Y>\frac{17-M}{\sigma}\Big)
+\]
+
+Gaussian rvs are important because the sum of many different
+independent rvs that have the same pdf ``converges'' to a Gaussian
+rv.
+
+
+\medskip\hrule
+\subsection{Lecture 18 - Multiple Continous Random Variables}
+
+\subsubsection{Joint Continuous Random Variables}
+
+Say $X$, $Y$ rvs defined in some $\Omega$, $\mathbb{P}$ are
+\textbf{jointly continuous} with \textbf{joint pdf} $f_{X,Y}(x,y)$
+when:
+
+\begin{equation}
+  \tag{Jointly Continuous Definition}
+  \boxed{
+    \mathbb{P}(\{(X,Y)\in V\}) = \iint_{-V} f_{X,Y}(x,y) dx dy \quad
+    \forall V \subset \mathbb{R}^2
+  }
+\end{equation}
+
+Special Case of $V$: $V : [a_1,b_1] \times [a_2,b_2]$
+
+\[
+  \mathbb{P}(\{X,Y)\in V\}) = \int_{a_1}^{b_2}dx \int_{a_2}^{b_2}dy
+  (f_{X,Y}(x,Y))
+\]
+
+From the joint pdf, we can also derive the marginals:
+
+\begin{equation}
+  \tag{Joint pdf Marginals}
+  \boxed{
+    \begin{split}
+      f_X(x) &= \int_{-\infty}^{+\infty} f_{X,Y}(x,y) dy \\
+      f_Y(y) &= \int_{-\infty}^{+\infty} f_{X,Y}(x,y) dx
+    \end{split}
+  }
+\end{equation}
+
+Other Properties:
+
+\begin{itemize}
+\item $\int\limits_{-\infty}^{+\infty} dx
+  \int\limits_{-\infty}^{+\infty} dy (f_{X,Y}(x,y)) = 1$
+
+\item Joint CDF: $F_{X,Y}(x,y) = \mathbb{P}(\{X=x\} \cap \{Y=y\}) =
+  \int\limits_{-\infty}^{x} ds \int\limits_{-\infty}^{y} dy
+  (f_{X,Y}(s,t))$
+
+\item $f_{X,Y}(x,) = \frac{\delta}{\delta x} \frac{\delta}{\delta y}
+  F_{X,Y}(x,y)$
+
+\item Generalization to $> 2$ rv pretty ``straightforward''
+\end{itemize}
+
+For discrete rvs, joint determines marginals, but not vice-versa.
+
+\subsubsection{Conditional for Continuous rvs: Events}
+
+Given a continuous rv $X$ on $\Omega$, $\mathbb{P}$, and some event
+$A\subset\Omega$, the conditional pdf of $X$ given $A$ ``defined'' as
+follows:
+
+\begin{equation}
+  \tag{Conditional pdf: Event}
+  \boxed{
+    \mathbb{P}(\{X\in V\}\mid A) = \int_V f_{X\mid A}(x) dx \quad
+    \forall V \subset \mathbb{R}
+  }
+\end{equation}
+
+In general, no decent formula for $f_{X\mid A}(x)$ in terms of
+$f_X(x)$. One way to compute it is to take the conditional cdf of $X$
+given $A$ ($F_{X\mid A} = \mathbb{P}(\{X \leq x\} \mid A)$) and take
+$d/dx$ to find $f_X(x)$. However, if $A$ is an event of the form $\{X
+\in W\}$ and $\mathbb{P}(A)>0$, we have:
+
+\[
+  f_{X\mid A}(x) =
+  \begin{cases}
+    \frac{f_X(x)} {\mathbb{P}(\{X\in W\})} & \text{when } X\in W \\
+    0 & \text{otherwise}
+  \end{cases}
+\]
+
+We derive this by defining the indication function of $W$ as:
+
+\[
+  \chi_W(x) =
+  \begin{cases}
+    1 & \text{when } x\in W \\
+    0 & \text{when } x\not\in W
+  \end{cases}
+\]
+
+And using conditional functions for continuous rvs:
+
+\[
+  \begin{aligned}
+    \mathbb{P}(\{X\in W\}\mid A)
+    &= \frac{\mathbb{P}(\{X\in (V\cap W)\})} {\mathbb{P}(\{x\in W\})} \\
+    &= \frac{\int_{V\cap W}f_X(x)dx} {\mathbb{P}(\{X\in W\})} \\
+    &= \int_V\bigg(\frac{f_X(x)\chi_W(x)} {\mathbb{P}(\{X\in W\})}\bigg) dx
+    &&= \begin{cases}
+      \frac{f_X(x)} {\mathbb{P}(\{X\in W\})} & \text{when } X\in W \\
+      0 & \text{otherwise}
+    \end{cases}
+  \end{aligned}
+\]
+
+
+\medskip\hrule
+\subsection{Lecture 19 - Total Probability Theorem}
+
+\subsubsection{Total Probability Theorem}
+
+\subsubsection{Conditional for Continuous rvs: Other rvs}
+
+
+\medskip\hrule
+\subsection{Lecture 20 - Conditional Expectance, Independence,
+  Continuous Bayes' Rule}
+
+\subsubsection{Conditional Expected Value}
+
+\subsubsection{Indpendence}
+
+For any pair $X,Y$, both continuous rvs with densities $f_X(x)$,
+$f_Y(y)$, $f_{X,Y}(x,y)$, $X$ and $Y$ are independent iff:
+
+\begin{equation}
+  \tag{Independence: Continuous}
+  \boxed{
+    f_{X,Y}(x,y) = f_X(x)f_Y(y) \quad \forall x, y
+  }
+\end{equation}
+
+Note: When $X$ and $Y$ are independent, we have:
+
+\begin{itemize}
+\item $\mathbb{E}(XY) = \mathbb{E}(X)\mathbb{E}(Y)$
+\item $\mathbb{E}(g(X)h(Y)) = \mathbb{E}(g(X))\mathbb{E}(h(Y))$
+\item $Var(X+Y) = Var(X)+Var(Y)$
+\end{itemize}
+
+\subsubsection{Continuous Bayes' Rule}
+
+
+\medskip\hrule
 \end{document}
