@@ -1,4 +1,4 @@
-\documentclass{article}
+n\documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage[letterpaper,top=3cm,bottom=2cm,left=3cm,right=3cm,
 marginpaperwidth=1.75cm]{geometry}
@@ -1175,7 +1175,50 @@ And using conditional functions for continuous rvs:
 
 \subsubsection{Total Probability Theorem}
 
+In the context of $F_{X \mid A}:$ If $X$ is a continuous rv and $A_1,
+\dots, A_n$ are events of positive probability that partition
+$\Omega$, then:
+
+\begin{equation}
+  \tag{Total Probability Theorem}
+  \boxed{
+    f_X(x) = \sum_{k=1}^n f_{X\mid A_k}(x) \mathbb{P}(A_k)
+  }
+\end{equation}
+
+To see this: go via cdfs:
+
+\[
+  \begin{aligned}
+    F_{X\mid A_k} = \frac{\mathbb{P}(\{X\leq x\} \cap A_k)}
+    {\mathbb{P}(A_k)}
+    & \frac{d}{dx} F_{X\mid A_k} = f_{X\mid A_k}(x) \\
+    F_X(x) = \mathbb{P}(\{X\leq x\}) = \sum_{k=1}^n f_{X\mid
+      A_k}\mathbb{P}(A_k) \rightarrow
+    & \sum_{k=1}^n f_{X\mid A_k} \mathbb{P}(A_k) = f_X(x)
+  \end{aligned}
+\]
+
 \subsubsection{Conditional for Continuous rvs: Other rvs}
+
+Given two continuous rvs $X$ and $Y$, the \textbf{conditional pdf of
+  $X$ given $Y = y$} is defined as:
+
+\begin{equation}
+  \tag{Conditional pdf: Other rvs}
+  \boxed{
+    f_{X\mid Y}(x,y) = \frac{f_{X,Y}(x,y)}{f_Y(y)}
+  }
+\end{equation}
+
+Note: that for fixed $y$, this as a function of $x$ is a legit pdf;
+
+\[
+  \int_{-\infty}^\infty f_{X\mid Y}(x\mid y) dx =
+  \int_{-\infty}^\infty \frac{f_{X,Y}(x,y)}{f_{Y}(y)} dy =
+  \frac{1}{f_Y(y)} \int_{-\infty}^{\infty} f_{X,Y}(x,y)dx =
+  \frac{f_Y(y)}{f_Y(y)} = 1
+\]
 
 
 \medskip\hrule
@@ -1183,6 +1226,45 @@ And using conditional functions for continuous rvs:
   Continuous Bayes' Rule}
 
 \subsubsection{Conditional Expected Value}
+
+We define the \textbf{Conditional Expected Value} for an rv to be:
+
+\begin{equation}
+  \tag{}
+  \boxed{
+    \begin{aligned}
+      \text{Given } X, A,
+      & \mathbb{E}(X\mid A) = \int_{-\infty}^\infty xf_{X\mid A}(x) dx
+      \\
+      \text{Given } X, Y,
+      & \mathbb{E}(X\mid Y=y) = \int _{-\infty}^\infty xf_{X\mid
+        Y}(x\mid y) dx \quad \forall y
+    \end{aligned}
+  }
+\end{equation}
+
+From this, we can see that the \textbf{Expected Value Rule} holds as
+usual:
+
+\begin{equation}
+  \tag{Conditional Expected Value Rule}
+  \boxed{
+    \begin{aligned}
+      \mathbb{E}(g(X)\mid A)
+      &= \int_{-\infty}^\infty g(X) f_{X\mid A}(x)dx \\
+      \mathbb{E}(g(X)\mid Y=y)
+      &= \int_{-\infty}^\infty g(X) f_{X\mid Y}(x\mid y) dx \quad
+      \forall y
+    \end{aligned}
+  }
+\end{equation}
+
+We can also see these ``total expectation theorems'':
+
+\[
+  \mathbb{E}(X) = \sum_{k=1}^n \mathbb{E}(X\mid A_k)\mathbb{P}(A_k) =
+  \int_{-\infty}^\infty \mathbb{E}(X\mid Y=y) f_Y(y) dy
+\]
 
 \subsubsection{Indpendence}
 
@@ -1206,6 +1288,77 @@ Note: When $X$ and $Y$ are independent, we have:
 
 \subsubsection{Continuous Bayes' Rule}
 
+The \textbf{Continuous Bayes' Rule} becomes important when we have a
+good understanding of $f_X(x)$, a good model for $f_{Y\mid X}(y\mid
+x)$, and we want to find $f_{X\mid Y}(x\mid y)$.
+
+\begin{equation}
+  \tag{Continuous Bayes' Rule}
+  \boxed{
+    f_{X\mid Y}(x\mid y) = \frac{f_{Y\mid X}(y\mid x)f_X(x)}
+    {\int_{-\infty}^\infty f_{Y\mid X}(y\mid x) f_X(x) dx}
+  }
+\end{equation}
+
+\medskip\hrule
+\subsection{Lecture 21 - Derived Distribution}
+
+The basis of Derived Distributions stems from having a continuous rv
+$X$ with a pdf $f_X(x)$ and a function $Y=g(X)$. If we want to find
+$f_Y(y)$, in many cases it is easier to find $F_Y(y)$ and find
+$f_Y(y)$ by $f_Y(y) = \frac{dF_Y(y)}{dy}$.
+
+\medskip\hrule
+\subsection{Lecture 22 - Examples of Derived Distribution}
+
+
+\medskip\hrule
+\pagebreak
+\section{Post Prelim 2}
+
+\subsection{Lecture 23 - Covariance, Conditional Expectation Revisited}
+
+\subsubsection{Covariance}
+
+\subsubsection{Conditional Expectation Revisited}
+
+
+\medskip\hrule
+\subsection{Lecture 24 - Conditional Expectation + Covariance}
+
+\subsubsection{Law of Iterated Expectations}
+
+\subsubsection{Conditional Variance}
+
+
+\medskip\hrule
+\subsection{Lecture 25 - Law of Total Variance, Moment Generating Functions}
+
+\subsubsection{Law of Total Variance}
+
+\subsubsection{Moment Generating Functions}
+
+
+\medskip\hrule
+\subsection{Lecture 26 - MGF Examples, Limit Theorems}
+
+\subsubsection{Limit Theorems}
+
+
+\medskip\hrule
+\subsection{Lecture 27 - More Limit Theorems (Central Limit Theorem)}
+
+\subsubsection{Chebychev's Inequality}
+
+\subsubsection{Markov Inequality}
+
+\subsubsection{Central Limit Theorem}
+
+
+\medskip\hrule
+\subsection{Lecture 28 - Caution with CLT, SLLN}
+
+\subsubsection{}
 
 \medskip\hrule
 \end{document}
